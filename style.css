@@ -1,0 +1,41 @@
+.cuadro  { 
+    width: 60%; 
+    border: 1px black solid; 
+    font-family: arial; 
+    overflow: auto;
+}
+.carta  { 
+    width: 150px; 
+    height: 250px;
+}
+.coin  { 
+    width: 30px; 
+    height: 30px;
+}
+.boton {
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    width: 150px;
+    height: 100px;
+}
+
+input[type="number"] {
+    width:50px;
+}
+
+.sder {
+     float: right;
+}
+
+.apuestas {
+    vertical-align: top;
+}
+
+.credito {
+    font-size: 40px;
+}
+
+.resultado {
+    border: 1px black solid;
+}

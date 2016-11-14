@@ -23,6 +23,8 @@ var estab = 0;
     // Para sumar el valos de las cartas que han salido
 var valor = 0;
 var valorb = 0;
+var val = 0;
+var suma = 0;
     // Para que las cartas de la banca salgan una a una
 var tiempo;
     // Credito
@@ -35,7 +37,7 @@ var terminado = 0;
 //Funcion para reiniciar la partida
 function reiniciar () {
     if (credito <= 0){
-        location.reload();
+        location.reload(); /*global location*/
     } else {
         alert("Todavía tienes crédito. Sigue jugando.");
     }
@@ -115,9 +117,9 @@ function carta () {
 
 // Funcion para sumar las cartas que han salido
 function sumar(siguiente){
-    var suma = siguiente.split("");
+    suma = siguiente.split("");
     if ((suma[0]=="s") || (suma[0]=="c") || (suma[0]=="r")) {
-        var val = 5;
+        val = 5;
         val = parseInt(val);
         if (valor == 0) {
             valor = val;
@@ -125,7 +127,7 @@ function sumar(siguiente){
             valor = valor + val;
         }
     } else {
-        var val = parseInt(suma[0]);
+        val = parseInt(suma[0]);
         val = (val*10);
         if (valor == 0) {
             valor = val;
@@ -209,9 +211,9 @@ function plantarse () {
 
 // Funcion para sumar el valor de las cartas de la banca
 function sumarb(siguienteb){
-    var suma = siguienteb.split("");
+    suma = siguienteb.split("");
     if ((suma[0]=="s") || (suma[0]=="c") || (suma[0]=="r")) {
-        var val = 5;
+        val = 5;
         val = parseInt(val);
         if (valorb == 0) {
             valorb = val;
@@ -220,7 +222,7 @@ function sumarb(siguienteb){
         }
         
     } else {
-        var val = parseInt(suma[0]);
+        val = parseInt(suma[0]);
         val = (val*10);
         if (valorb == 0) {
             valorb = val;

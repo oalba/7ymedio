@@ -240,16 +240,18 @@ function sumarb(siguienteb){
 // Funcion para apostarel credito del jugador
 function apostar () {
     var apu = document.getElementById("apuesta");
-    if (apuesta > apu.value){
+    apu = parseInt(apu.value);
+    apuesta = parseInt(apuesta);
+    if (apuesta > apu){
         alert("No puedes apostar menos de lo apostado anteriormente.");
     } else {
-        apuesta = apu.value;
-    	if (apuesta == "") {
+    	if (apu == "") {
     	    apuesta = 0;
-    	} else if (apuesta > credito) {
+    	} else if (apu > credito) {
     	    alert("Tu apuesta es mayor que tu crédito.");
     	} else {
-    	    document.getElementById('apostado').innerHTML = 'Apostado: ' + apuesta;
+    	    document.getElementById('apostado').innerHTML = 'Apostado: ' + apu;
+    	    apuesta = apu;
     	} 
     }
 	
